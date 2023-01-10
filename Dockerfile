@@ -51,6 +51,10 @@ RUN systemctl enable httpd && \
     systemctl enable rsyslog && \
     systemctl enable xcatd
 
+RUN yum install iproute -y
+RUN yum install initscripts -y
+RUN yum install chkconfig -y
+RUN systemctl start xcatd
 
 
 
